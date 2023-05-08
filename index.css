@@ -1,0 +1,280 @@
+:root {
+  --ligth-vermillion: #f15d51;
+  --gunmetal: #5e607a;
+  --yellow: #e9aa52;
+  --silver: #c5c6ce;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("assets/fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+body {
+  margin: 0;
+}
+/* Main Container and Navigation Bar */
+.container {
+  background: #fffdfa;
+  margin: 100px;
+}
+.desktop-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.desktop-menu li {
+  padding-left: 15px;
+}
+.desktop-menu li a {
+  text-decoration: none;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--gunmetal);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobile Menu */
+.mobile-container {
+  display: none;
+}
+.mobile-container i {
+  font-size: 25px;
+}
+/* Hero Section Styles */
+
+.hero {
+  display: flex;
+  gap: 40px;
+  margin: 20px 0;
+}
+
+/* Hero Section Left Container */
+.hero-img-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.hero .hero-img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.hero-img-wrap-content {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  gap: 40px;
+}
+
+.left-img-wrap-content,
+.right-img-wrap-content {
+  flex-basis: 50%;
+}
+
+.hero .hero-img-wrap-content h1 {
+  color: #00001a;
+  margin: 0;
+  font-size: 60px;
+  line-height: 70px;
+  font-weight: bold;
+}
+.hero-img-wrap-content div p {
+  color: var(--gunmetal);
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.hero-img-wrap-content div button {
+  padding: 20px 30px 20px 30px;
+  letter-spacing: 5px;
+  font-weight: bold;
+  color: #fff;
+  background: var(--ligth-vermillion);
+  border: none;
+  text-transform: uppercase;
+}
+
+/* Hero Section Right Container */
+.hero .hero-content-wrap {
+  background: #00001a;
+}
+
+.hero .hero-content-wrap .hero-content {
+  margin: 0 24px;
+}
+
+.hero .hero-content-wrap .hero-content div:not(:last-child) {
+  border-bottom: 1px solid #5e607a;
+}
+
+h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--yellow);
+  margin-left: 24px;
+}
+h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  color: #fffdfa;
+  margin-bottom: 0px !important;
+  margin-top: 25px;
+}
+.hero-content div p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+  color: var(--silver);
+}
+
+/* Bellow Hero Section Content */
+.news-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 80px;
+}
+.news-content {
+  display: flex;
+  align-items: center;
+}
+/* .news-content img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+} */
+.news-content div {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+.news-content div h2 {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  color: var(--silver);
+}
+
+.news-content div p:not(:last-child) {
+  margin-top: 0;
+  font-size: 20px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  color: #00001a;
+}
+.news-content div p:last-child {
+  color: var(--gunmetal);
+  margin-top: 0;
+  margin-bottom: 25px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* Hover Effects */
+.container nav ul li a:hover {
+  color: var(--yellow);
+}
+
+.hero-img-wrap-content div button:hover {
+  background: #00001a;
+}
+
+.hero-content div h3:hover {
+  color: var(--yellow);
+}
+
+.news-content div p:not(:last-child):hover {
+  color: var(--ligth-vermillion);
+}
+.show-menu.active{
+    display: block;
+  }
+@media (max-width: 1024px) {
+  .mobile-container {
+    display: block;
+    position: relative;
+    z-index: 1;
+  }
+  .show-menu {
+    display: none;
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    width: 80vw;
+    background-color: #fff;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    transition: right 0.3s ease-in-out;
+  }
+  .show-menu li a {
+    display: block;
+    padding: 20px;
+    color: #00001a;
+    font-size: 20px;
+    font-family: 'Inter';
+    text-decoration: none;
+  }
+
+  .close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 30px;
+  }
+  .container .desktop-menu {
+    display: none;
+  }
+  .container {
+    margin: 20px;
+  }
+  .hero,
+  .news-container {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero .hero-img-wrap-content h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  .news-content {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+  }
+  .news-container {
+    margin-top: 0;
+  }
+}
+@media (max-width: 768px) {
+  .hero-img-wrap-content {
+    display: flex;
+    flex-direction: column;
+  }
+}
